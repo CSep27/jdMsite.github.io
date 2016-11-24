@@ -1,0 +1,231 @@
+body {
+    background-color: #f5f5f5;
+}
+
+/*覆盖顶部通栏的样式*/
+.jd_topbar {
+    position: static;
+}
+
+/*安全提示*/
+.jd_safeTip {
+    background-color: #fff;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.jd_safeTip p {
+    font-size: 12px;
+    position: relative;
+    padding-left: 23px;
+    display: inline-block;
+}
+
+.jd_safeTip p:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: url("../images/safe_icon.png") no-repeat;
+    -webkit-background-size: 18px 18px;
+    background-size: 18px 18px;
+    position: absolute;
+    top: 9px;
+    left:0;
+}
+
+/*店铺*/
+.jd_shop {
+    background-color: #fff;
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+/*勾选框*/
+.check_box {
+    float: left;
+}
+
+.check_box_a {
+    width: 40px;
+    height: 34px;
+    padding: 7px 10px;
+    background: url("../images/shop-icon.png");
+    background-size: 50px 100px;
+    background-origin: content-box;
+    background-clip: content-box;
+    display: block;
+}
+
+.info_box {
+    overflow: hidden;
+    padding-right: 10px;
+}
+
+/*头部*/
+.shop_head {
+    height: 34px;
+    line-height: 34px;
+}
+
+.shop_head .info_box img {
+    width: 16px;
+    height: 14px;
+}
+
+.shop_head .info_box p {
+    float: right;
+    color: #d8505c;
+    font-size: 12px;
+}
+
+/*内容*/
+.shop_con_item {
+    border-top: 1px solid #ccc;
+    min-height: 100px;
+}
+
+.shop_con_item .check_box_a {
+    background-position: -25px 0;
+}
+
+.shop_con_item .info_box {
+    margin-top:10px;
+}
+
+.item_img {
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+.item_img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.item_txt{
+    font-size: 12px;
+    overflow: hidden;
+    padding-left:10px;
+}
+.item_txt a{
+    display: block;
+    overflow: hidden;
+    height: 30px;
+}
+.item_txt p{
+    padding:5px 0;
+    color: #d8505c;
+}
+.item_txt .option_change{
+    float: left;
+}
+.item_txt .option_change span{
+    width: 36px;
+    height: 24px;
+    line-height: 24px;
+    float: left;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.item_txt .option_change input{
+    width: 36px;
+    height: 24px;
+    float: left;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.item_txt .option_delete{
+    float: right;
+}
+.item_txt .option_delete span:first-child{
+    width: 20px;
+    height: 5px;
+    background: url("../images/delete_up.png") no-repeat;
+    background-size: 20px 5px;
+    display: block;
+    margin-left: -1px;
+    margin-bottom:-3px;
+    transition: all 1s;
+}
+.item_txt .option_delete span:last-child{
+    width: 18px;
+    height: 18px;
+    background: url("../images/delete_down.png") no-repeat;
+    background-size: 18px 18px;
+    display: block;
+}
+/*弹出层*/
+.jd_cover{
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+.prompt{
+    background-color: #fff;
+    width: 80%;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate3d(-50%,-50%,0);
+    border-radius: 4px;
+    padding:0 10px;
+}
+.prompt p{
+    font-size: 20px;
+    height:80px;
+    line-height: 80px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+.choice a{
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    width: 45%;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 4px;
+    margin:10px 0;
+}
+.choice a:first-child{
+    border: 1px solid #ccc;
+    margin-right:10%;
+}
+.choice a:last-child{
+    background-color: #d8505c;
+    color:#fff;
+}
+/*prompt动画*/
+@keyframes myBounceInDown {
+    0%{
+        opacity: 0;
+        transform: translate3d(-50%,-1000%,0)
+    }
+    60%{
+        opacity: 1;
+        transform: translate3d(-50%,-43%,0)
+    }
+    75%{
+        transform: translate3d(-50%,-55%,0)
+    }
+    90%{
+        transform: translate3d(-50%,-48%,0)
+    }
+    100%{
+        transform: translate3d(-50%,-50%,0)
+    }
+}
+.myBounceInDown{
+    -webkit-animation: myBounceInDown 1s;
+    animation: myBounceInDown 1s;
+}
